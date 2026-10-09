@@ -9,6 +9,8 @@ Version: 2.0.0
 - [x] Browser demo: all six switches visible; all-off removes enhanced controls; notes-only leaves exactly the account-note controls.
 - [x] Public screenshot is clearly labelled synthetic demo data.
 - [ ] Installed v2 extension: verify save, persistence, export, switches and noise on live X after reloading.
-- [ ] Public repository and release download verified independently.
+- [x] Public repository independently cloned; commit matches; GitHub CI passed.
+- [x] Browser demo: saved clipping survives refresh and is searchable by tags/notes; noise rules propagate across tabs and reveal works.
+- [ ] Published release download verified independently.
 
 The first two modules (follower badges and list filtering) were previously verified on live X in v1.1.0. This is separate from the new v2 installed-runtime checks. Article extraction remains dependent on X's current markup and covers loaded text only.
