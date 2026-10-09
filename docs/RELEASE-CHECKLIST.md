@@ -11,6 +11,6 @@ Version: 2.0.0
 - [ ] Installed v2 extension: verify save, persistence, export, switches and noise on live X after reloading.
 - [x] Public repository independently cloned; commit matches; GitHub CI passed.
 - [x] Browser demo: saved clipping survives refresh and is searchable by tags/notes; noise rules propagate across tabs and reveal works.
-- [ ] Published release download verified independently.
+- [x] Published release ZIP downloaded without authentication; SHA-256 matches the local install package: `5adda7312a7f11c9e69f6db12ca47a740c995471f2ea44ad217702cb34bc0873`.
 
 The first two modules (follower badges and list filtering) were previously verified on live X in v1.1.0. This is separate from the new v2 installed-runtime checks. Article extraction remains dependent on X's current markup and covers loaded text only.
