@@ -1,0 +1,13 @@
+{
+  "name": "x-kit",
+  "private": true,
+  "version": "2.0.0",
+  "scripts": {
+    "build": "node build.cjs",
+    "test": "node build.cjs && node --test tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "prettier": "^3.9.9"
+  }
+}

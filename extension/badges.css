@@ -1,0 +1,25 @@
+.xfb-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  vertical-align: middle !important;
+  margin-inline-start: 6px !important;
+  padding: 1px 5px !important;
+  border-radius: 5px !important;
+  background: rgba(29, 155, 240, 0.13) !important;
+  color: #1685cb !important;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 17px !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  font-variant-numeric: tabular-nums !important;
+}
+@media (prefers-color-scheme: dark) {
+  .xfb-badge {
+    color: #69bfff !important;
+    background: rgba(29, 155, 240, 0.19) !important;
+  }
+}

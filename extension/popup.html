@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>X Kit</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">X<span>Kit</span></div>
+      <p>
+        让每次浏览，都有所积累。<span class="version"
+          >v<span id="version"></span
+        ></span>
+      </p>
+    </header>
+    <div class="heading">
+      <span>我的六个工具</span>
+      <div>
+        <button id="all-on">全开</button><button id="all-off">全关</button>
+      </div>
+    </div>
+    <section id="features" aria-label="功能开关"></section>
+    <div class="format-row">
+      <label for="format">粉丝数字格式</label
+      ><select id="format">
+        <option value="compact">简写 · 1.2万</option>
+        <option value="exact">完整 · 12,345</option>
+      </select>
+    </div>
+    <button class="primary" id="open-library">
+      打开素材库 · 备注 · 降噪规则
+    </button>
+    <section class="status" aria-live="polite">
+      <strong id="status">正在连接…</strong>
+      <p id="detail"></p>
+    </section>
+    <footer>
+      <span>本地保存 · 无账号绑定 · 无数据上传</span
+      ><button id="reload" title="更新插件后点击，再刷新 X 页面">
+        重新加载插件
+      </button>
+    </footer>
+    <script src="popup.js"></script>
+  </body>
+</html>

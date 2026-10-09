@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>X 粉丝数 · 本地效果预览</title>
+    <link rel="stylesheet" href="/extension/badges.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f5f7f9;
+        color: #18222b;
+        font:
+          15px/1.6 system-ui,
+          "Microsoft YaHei",
+          sans-serif;
+      }
+      .shell {
+        max-width: 1080px;
+        margin: 64px auto;
+        padding: 0 24px;
+      }
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #1685cb;
+      }
+      h1 {
+        font-size: 40px;
+        letter-spacing: -1.4px;
+        margin: 12px 0;
+      }
+      p {
+        color: #71818c;
+      }
+      .intro {
+        margin-bottom: 36px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+        gap: 24px;
+      }
+      .panel {
+        background: white;
+        border: 1px solid #e1e7eb;
+        border-radius: 18px;
+        overflow: hidden;
+      }
+      h2 {
+        font-size: 16px;
+        margin: 0;
+        padding: 22px 24px;
+        border-bottom: 1px solid #eef1f3;
+      }
+      .row {
+        padding: 22px 24px;
+        border-bottom: 1px solid #eef1f3;
+        display: flex;
+        gap: 12px;
+      }
+      .avatar {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: #e5f1fb;
+        color: #1571a7;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        font-weight: 600;
+      }
+      .name {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .name a {
+        color: #71818c;
+        text-decoration: none;
+        font-size: 13px;
+      }
+      .handle {
+        display: flex;
+        align-items: center;
+      }
+      .name strong {
+        font-size: 14px;
+      }
+      .body {
+        margin: 9px 0;
+        color: #273740;
+        font-size: 14px;
+      }
+      .meta {
+        font-size: 12px;
+        color: #9aa4ad;
+      }
+      .settings {
+        padding: 22px 24px;
+      }
+      .setting {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 16px;
+        font-size: 13px;
+      }
+      input {
+        width: 20px;
+        height: 20px;
+        accent-color: #1685cb;
+      }
+      select,
+      button {
+        font: inherit;
+        color: inherit;
+        background: #fff;
+        border: 1px solid #dae2e7;
+        border-radius: 8px;
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+      button {
+        width: 100%;
+        margin-top: 4px;
+      }
+      .notice {
+        font-size: 12px;
+        line-height: 1.8;
+        color: #7a8790;
+        padding-top: 16px;
+        border-top: 1px solid #e5eaed;
+      }
+      .footer {
+        font-size: 12px;
+        margin-top: 24px;
+        color: #84919a;
+      }
+      body.dark {
+        background: #101923;
+        color: #e8edf2;
+      }
+      body.dark .panel,
+      body.dark button,
+      body.dark select {
+        background: #182735;
+        color: inherit;
+        border-color: #304352;
+      }
+      body.dark .body {
+        color: #d5e0e8;
+      }
+      body.dark .row,
+      body.dark h2,
+      body.dark .notice {
+        border-color: #304352;
+      }
+      body.dark .xfb-badge {
+        color: #6cc0ff !important;
+      }
+      @media (max-width: 720px) {
+        .shell {
+          margin-top: 30px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="intro">
+        <div class="eyebrow">X FOLLOWER BADGES / 1.0</div>
+        <h1>刷到一个账号，多看见一点。</h1>
+        <p>粉丝数就在账号旁边。鼠标悬停，查看完整数字。</p>
+      </div>
+      <div class="grid">
+        <main class="panel">
+          <h2>信息流 · 效果预览</h2>
+          <div id="rows">
+            <article class="row">
+              <div class="avatar">A</div>
+              <div>
+                <div class="name" data-testid="User-Name">
+                  <strong>示例 · 内容创作者</strong
+                  ><a href="https://x.com/demo_creator"
+                    ><div class="handle"><span>@demo_creator</span></div></a
+                  >
+                </div>
+                <p class="body">看到感兴趣的人，不用每次点开主页查看粉丝数。</p>
+                <div class="meta">示例数据 · 17,456 位粉丝</div>
+              </div>
+            </article>
+            <article class="row">
+              <div class="avatar">B</div>
+              <div>
+                <div class="name" data-testid="UserCell">
+                  <strong>示例 · 独立开发者</strong
+                  ><a href="https://x.com/demo_builder"
+                    ><div class="handle"><span>@demo_builder</span></div></a
+                  >
+                </div>
+                <p class="body">
+                  小账号也可能提供有价值的信息，数字只是一个参考。
+                </p>
+                <div class="meta">示例数据 · 178 位粉丝</div>
+              </div>
+            </article>
+            <article class="row">
+              <div class="avatar">C</div>
+              <div>
+                <div class="name" data-testid="UserCell">
+                  <strong>示例 · 暂无数据</strong
+                  ><a href="https://x.com/demo_unknown"
+                    ><div class="handle"><span>@demo_unknown</span></div></a
+                  >
+                </div>
+                <p class="body">页面没返回粉丝数时，不显示标签，也不补成 0。</p>
+                <div class="meta">缺少数据 · 无标签</div>
+              </div>
+            </article>
+          </div>
+        </main>
+        <aside class="panel">
+          <h2>试试显示方式</h2>
+          <div class="settings">
+            <label class="setting"
+              >显示粉丝数<input id="enabled" type="checkbox" checked /></label
+            ><label class="setting"
+              >数字格式<select id="format">
+                <option value="compact">简写 · 1.7万</option>
+                <option value="exact">完整 · 17,456</option>
+              </select></label
+            ><button id="load">模拟滚动，加载新账号</button
+            ><button id="theme">切换深色预览</button>
+            <p class="notice">
+              这是本地交互预览，所有账号和数字都是示例。标签由插件本身的显示代码生成。真实使用时，数据来自
+              X 页面已有的响应。
+            </p>
+          </div>
+        </aside>
+      </div>
+      <div class="footer">本地处理 · 不调用付费 API · 不上传账号数据</div>
+    </div>
+    <script src="harness.js"></script>
+    <script src="/extension/core.js"></script>
+    <script src="/extension/content.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>

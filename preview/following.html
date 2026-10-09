@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>关注列表筛选 · 示例预览</title>
+    <link rel="stylesheet" href="/extension/filters.css" />
+    <link rel="stylesheet" href="/extension/badges.css" />
+    <style>
+      body {
+        font:
+          14px/1.6 system-ui,
+          sans-serif;
+        background: #edf2f6;
+        color: #182b39;
+        margin: 0;
+      }
+      main {
+        max-width: 640px;
+        background: white;
+        border: 1px solid #dae3e9;
+        margin: 32px auto;
+      }
+      header {
+        padding: 22px 28px 12px;
+      }
+      h1 {
+        font-size: 22px;
+        margin: 0;
+      }
+      header p {
+        font-size: 12px;
+        color: #657a89;
+        margin: 8px 0;
+      }
+      nav {
+        padding: 12px 28px;
+        border-bottom: 1px solid #e5edf2;
+      }
+      nav a {
+        color: #1685cb;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      [data-testid="UserCell"] {
+        padding: 18px 28px;
+        border-bottom: 1px solid #e5edf2;
+      }
+      [data-testid="UserCell"] > div {
+        display: flex;
+        gap: 12px;
+      }
+      .avatar {
+        width: 36px;
+        height: 36px;
+        background: #e4f2fb;
+        color: #1875ac;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        flex-shrink: 0;
+      }
+      .profile-header {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .profile-header a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .profile-header a:first-child {
+        font-weight: 600;
+      }
+      .profile-header a:nth-child(2) {
+        color: #60788c;
+        font-size: 12px;
+      }
+      .profile-header button {
+        margin-left: auto;
+        border: 1px solid #ccdbe6;
+        background: white;
+        border-radius: 12px;
+        color: #668095;
+      }
+      .bio {
+        margin-top: 8px;
+      }
+      footer {
+        padding: 20px;
+        color: #627789;
+        font-size: 12px;
+      }
+      #load {
+        padding: 9px 16px;
+        border: 1px solid #b3d4eb;
+        border-radius: 8px;
+        background: white;
+        color: #126b9f;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>关注列表筛选</h1>
+        <p>演示页面 · 以下账号、简介与数字均为示例</p>
+        <button id="load">模拟继续浏览，加载新账号</button>
+      </header>
+      <div data-testid="primaryColumn">
+        <nav>
+          <a href="https://x.com/demo/following" role="tab" aria-selected="true"
+            >正在关注</a
+          >
+        </nav>
+        <section role="region" aria-labelledby="demo-list">
+          <h2 id="demo-list" hidden>示例关注列表</h2>
+          <div id="native-rows"></div>
+        </section>
+      </div>
+      <footer>上方结果区使用插件实际代码。原列表仍可继续浏览。</footer>
+    </main>
+    <script src="/preview/harness.js"></script>
+    <script src="/extension/content.js"></script>
+    <script src="/preview/following.js"></script>
+  </body>
+</html>

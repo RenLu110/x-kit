@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "X Kit · 本地工具箱",
+  "version": "2.0.0",
+  "description": "六个独立开关：粉丝数、名单筛选、账号备注、本地收藏、内容导出和可撤销降噪。无账号绑定，无数据上传。",
+  "minimum_chrome_version": "114",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "X Kit",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://www.x.com/*",
+        "https://twitter.com/*",
+        "https://www.twitter.com/*"
+      ],
+      "js": [
+        "page-hook.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://www.x.com/*",
+        "https://twitter.com/*",
+        "https://www.twitter.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "badges.css",
+        "filters.css",
+        "toolkit.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "library.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

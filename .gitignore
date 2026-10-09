@@ -1,0 +1,8 @@
+node_modules/
+*.zip
+preview/*.log
+preview/*.png
+效果预览.html
+private/
+release/
+.DS_Store

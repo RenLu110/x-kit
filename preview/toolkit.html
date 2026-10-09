@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>X Kit · 六模块交互演示</title>
+    <link rel="stylesheet" href="/extension/badges.css" />
+    <link rel="stylesheet" href="/extension/toolkit.css" />
+    <style>
+      body {
+        margin: 0;
+        background: #eef3f7;
+        font: 15px/1.8 system-ui;
+        color: #24394d;
+      }
+      .wrap {
+        max-width: 1040px;
+        margin: 35px auto;
+        display: grid;
+        grid-template-columns: 380px 1fr;
+        gap: 30px;
+        padding: 0 20px;
+      }
+      iframe {
+        width: 372px;
+        height: 775px;
+        border: 0;
+        border-radius: 14px;
+      }
+      h1 {
+        font-size: 26px;
+        line-height: 1.4;
+      }
+      .muted {
+        font-size: 12px;
+        color: #70879b;
+      }
+      article {
+        background: white;
+        border: 1px solid #d2e1ec;
+        border-radius: 14px;
+        padding: 24px;
+        margin: 20px 0;
+      }
+      article a {
+        color: #247fb4;
+        text-decoration: none;
+      }
+      [data-testid="User-Name"] {
+        display: flex;
+        gap: 12px;
+        font-size: 13px;
+      }
+      article time {
+        font-size: 11px;
+        color: #8ba0b0;
+      }
+      [data-testid="tweetText"] {
+        margin: 18px 0;
+      }
+      .toplink {
+        font-size: 12px;
+        color: #287ea9;
+      }
+      .xkit-pagebar {
+        right: 20px;
+      }
+      #demo-count {
+        color: #71889d;
+      }
+      @media (max-width: 850px) {
+        .wrap {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <iframe title="X Kit 六个功能开关" src="/extension/popup.html"></iframe>
+      <div>
+        <h1>六个工具，你来决定开几个。</h1>
+        <p class="muted">交互演示 · 下方所有账号、正文、粉丝数均为示例数据</p>
+        <a class="toplink" href="/extension/library.html" target="_blank"
+          >打开示例素材库、备注和降噪规则 →</a
+        >
+        <main>
+          <article data-testid="tweet">
+            <div data-testid="User-Name">
+              <a href="https://x.com/demo_creator"
+                ><span>示例 · 产品观察</span></a
+              ><a href="https://x.com/demo_creator"
+                ><span>@demo_creator</span></a
+              >
+            </div>
+            <a href="https://x.com/demo_creator/status/1001"
+              ><time datetime="2026-10-09T00:00:00Z"
+                >示例帖子 · 10 月 9 日</time
+              ></a
+            >
+            <div data-testid="tweetText">
+              做 AI 产品，先找到用户每周重复处理、又不愿继续手工完成的那件事。
+            </div>
+          </article>
+          <article data-testid="tweet">
+            <div data-testid="User-Name">
+              <a href="https://x.com/demo_builder"
+                ><span>示例 · 独立开发</span></a
+              ><a href="https://x.com/demo_builder"
+                ><span>@demo_builder</span></a
+              >
+            </div>
+            <a href="https://x.com/demo_builder/status/1002"
+              ><time datetime="2026-10-09T01:00:00Z"
+                >示例帖子 · 10 月 9 日</time
+              ></a
+            >
+            <div data-testid="tweetText">
+              功能增加之前，先确认上一个功能有没有被真正使用。
+            </div>
+          </article>
+          <article data-testid="tweet">
+            <div data-testid="User-Name">
+              <a href="https://x.com/demo_noise"><span>示例 · 降噪测试</span></a
+              ><a href="https://x.com/demo_noise"><span>@demo_noise</span></a>
+            </div>
+            <a href="https://x.com/demo_noise/status/1003"
+              ><time datetime="2026-10-09T02:00:00Z"
+                >示例帖子 · 10 月 9 日</time
+              ></a
+            >
+            <div data-testid="tweetText">
+              互关互赞，评论领取资料。可以用“互关”规则折叠这条示例。
+            </div>
+          </article>
+        </main>
+        <p class="muted">
+          页面读取使用实际插件代码；浏览器存储接口由演示适配器提供。
+        </p>
+      </div>
+    </div>
+    <script src="/preview/dev-runtime.js"></script>
+    <script src="/extension/background.js"></script>
+    <script src="/extension/content.js"></script>
+    <script src="/preview/toolkit-data.js"></script>
+  </body>
+</html>

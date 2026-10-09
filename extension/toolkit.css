@@ -1,0 +1,137 @@
+.xkit-ui {
+  font-family: system-ui, "Microsoft YaHei", sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+.xkit-ui button,
+button.xkit-ui {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #bfdaec;
+  background: #eff8ff;
+  color: #116294;
+  border-radius: 7px;
+  padding: 4px 9px;
+}
+.xkit-note-button {
+  display: inline-block !important;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 10px !important;
+  line-height: 16px !important;
+  padding: 0 4px !important;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.xkit-post-actions {
+  display: flex;
+  gap: 8px;
+  padding: 7px 0;
+  margin-left: 48px;
+}
+.xkit-pagebar {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 9999;
+  display: flex;
+  gap: 5px;
+  padding: 7px;
+  border: 1px solid #bed9ec;
+  border-radius: 12px;
+  background: #f4faff;
+  box-shadow: 0 5px 20px #12283c24;
+}
+.xkit-dialog {
+  background: #f8fbff;
+  color: #183047;
+  border: 1px solid #b3d5eb;
+  border-radius: 16px;
+  padding: 24px;
+  width: min(560px, calc(100vw - 32px));
+  max-height: 85vh;
+  overflow: auto;
+  box-shadow: 0 15px 60px #0004;
+}
+.xkit-dialog::backdrop {
+  background: #0e223766;
+}
+.xkit-dialog h2 {
+  font-size: 18px;
+  margin: 0 50px 14px 0;
+}
+.xkit-dialog .xkit-close {
+  position: absolute;
+  right: 16px;
+  top: 18px;
+}
+.xkit-dialog label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 13px 0;
+  font-size: 12px;
+}
+.xkit-dialog input:not([type="checkbox"]),
+.xkit-dialog textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid #bdd4e4;
+  background: #fff;
+  color: #142b3d;
+  font: inherit;
+}
+.xkit-dialog textarea {
+  min-height: 95px;
+  resize: vertical;
+}
+.xkit-dialog > button:not(.xkit-close) {
+  margin-right: 8px;
+}
+.xkit-dialog p {
+  font-size: 12px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.xkit-dialog .xkit-export-choice {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  border: 1px solid #d6e4ef;
+  border-radius: 8px;
+}
+.xkit-folded > :not(.xkit-noise-notice) {
+  display: none !important;
+}
+.xkit-noise-notice {
+  display: flex !important;
+  gap: 14px;
+  padding: 16px;
+  background: #f3f7fa;
+  color: #516779;
+  justify-content: space-between;
+  align-items: center;
+}
+.xkit-ui button:focus-visible,
+button.xkit-ui:focus-visible,
+.xkit-ui input:focus-visible,
+.xkit-ui textarea:focus-visible {
+  outline: 2px solid #1685cb;
+  outline-offset: 2px;
+}
+@media (max-width: 600px) {
+  .xkit-pagebar {
+    bottom: 68px;
+    right: 8px;
+    gap: 3px;
+  }
+  .xkit-pagebar button {
+    font-size: 10px;
+    padding: 3px 5px;
+  }
+}

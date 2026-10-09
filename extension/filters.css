@@ -1,0 +1,214 @@
+.xfb-filter {
+  font-family: system-ui, "Microsoft YaHei", sans-serif;
+  color: #172b3b;
+  background: #f5faff;
+  border: 1px solid #cbdfee;
+  border-radius: 14px;
+  margin: 12px 14px;
+  font-size: 13px;
+  line-height: 1.6;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.xfb-filter * {
+  box-sizing: border-box;
+}
+.xfb-filter summary {
+  cursor: pointer;
+  padding: 14px 16px;
+  list-style-position: inside;
+  user-select: none;
+}
+.xfb-filter summary strong {
+  font-size: 14px;
+  margin-left: 5px;
+}
+.xfb-filter-summary {
+  color: #5c7688;
+  font-size: 11px;
+  margin-left: 12px;
+}
+.xfb-filter-body {
+  padding: 0 16px 16px;
+}
+.xfb-filter label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+}
+.xfb-filter input[type="text"],
+.xfb-filter input[type="search"],
+.xfb-filter select {
+  font: inherit;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #c5d9e8;
+  border-radius: 8px;
+  background: white;
+  color: #182a39;
+  padding: 8px 10px;
+  line-height: 1.5;
+}
+.xfb-filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.xfb-filter-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin: 12px 0;
+}
+.xfb-filter-actions label {
+  flex-direction: row;
+  align-items: center;
+}
+.xfb-filter input[type="checkbox"] {
+  accent-color: #1685cb;
+}
+.xfb-filter button {
+  cursor: pointer;
+  font: inherit;
+  background: white;
+  border: 1px solid #c5d9e8;
+  border-radius: 8px;
+  color: #12679d;
+  padding: 5px 10px;
+}
+.xfb-filter-status {
+  font-size: 12px;
+  font-weight: 600;
+  color: #146a9d;
+  margin: 8px 0 4px;
+}
+.xfb-filter .xfb-filter-error {
+  color: #ac3722;
+}
+.xfb-filter-help {
+  color: #5e7485;
+  font-size: 11px;
+  margin: 4px 0 12px;
+}
+.xfb-filter-results {
+  max-height: 350px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: white;
+  border: 1px solid #dce8f0;
+  border-radius: 10px;
+  scrollbar-width: thin;
+}
+.xfb-result {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e7eef3;
+}
+.xfb-result:last-child {
+  border-bottom: 0;
+}
+.xfb-result-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.xfb-result a {
+  font-weight: 650;
+  color: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.xfb-result a:hover {
+  text-decoration: underline;
+}
+.xfb-result-count {
+  font-size: 11px;
+  white-space: nowrap;
+  color: #1474b2;
+  background: #eaf5fd;
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+.xfb-result-handle {
+  font-size: 11px;
+  color: #607789;
+}
+.xfb-result p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 6px 0 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.xfb-filter-empty {
+  padding: 15px;
+  font-size: 12px;
+  color: #607789;
+}
+.xfb-filter .xfb-more {
+  width: 100%;
+  margin-top: 10px;
+}
+.xfb-filter [hidden] {
+  display: none !important;
+}
+.xfb-filter :is(input, select, button, a, summary):focus-visible {
+  outline: 2px solid #1685cb;
+  outline-offset: 2px;
+}
+@media (max-width: 500px) {
+  .xfb-filter {
+    margin: 8px;
+  }
+  .xfb-filter-body {
+    padding: 0 12px 12px;
+  }
+  .xfb-filter-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .xfb-filter-grid label:last-child {
+    grid-column: 1/-1;
+  }
+  .xfb-filter-actions {
+    align-items: flex-start;
+  }
+  .xfb-filter-summary {
+    display: block;
+    margin-left: 20px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .xfb-filter {
+    background: #132b3c;
+    color: #e5f0f7;
+    border-color: #34556b;
+  }
+  .xfb-filter :is(input[type="text"], input[type="search"], select, button),
+  .xfb-filter-results {
+    background: #17232e;
+    color: #d8e8f3;
+    border-color: #34556b;
+  }
+  .xfb-filter-help,
+  .xfb-filter-summary,
+  .xfb-result-handle,
+  .xfb-filter-empty {
+    color: #a0b8c9;
+  }
+  .xfb-filter-status {
+    color: #71c2f5;
+  }
+  .xfb-result {
+    border-color: #2c4355;
+  }
+  .xfb-result-count {
+    background: #183d56;
+    color: #80cfff;
+  }
+  .xfb-filter .xfb-filter-error {
+    color: #ffb09d;
+  }
+}
